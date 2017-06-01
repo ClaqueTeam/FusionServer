@@ -20,7 +20,7 @@ namespace FusionServer.FusionServer.IO.UDP
         {
             if (this.socket != null)
             {
-                this.StartThread();
+                this.StartThread(); 
             }
             else
             {
