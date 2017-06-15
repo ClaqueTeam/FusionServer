@@ -2,7 +2,7 @@
 
 namespace FusionServer.FusionServer.Processing
 {
-    class InputProcess : FusionServer.Common.DataProducer<FusionServer.Data.FrameData>
+    class InputProcessor : FusionServer.Common.DataProducer<FusionServer.Data.FrameData>
     {
         private System.Collections.Generic.Dictionary<string, System.Collections.Concurrent.ConcurrentQueue<byte[]>> NetworkInputQueues;
 

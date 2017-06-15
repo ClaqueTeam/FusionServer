@@ -44,10 +44,12 @@
   <ItemGroup>
     <Compile Include="FusionServer\Common\DataConsumer.cs" />
     <Compile Include="FusionServer\Data\FrameData.cs" />
-    <Compile Include="FusionServer\Processing\InputProcess.cs" />
-    <Compile Include="FusionServer\Processing\FusionProcess.cs" />
+    <Compile Include="FusionServer\FusionPipeline.cs" />
+    <Compile Include="FusionServer\IO\MultipleRTCHandler.cs" />
+    <Compile Include="FusionServer\Processing\InputProcessor.cs" />
+    <Compile Include="FusionServer\Processing\FusionProcessor.cs" />
     <Compile Include="FusionServer\IO\ConfigParser.cs" />
-    <Compile Include="FusionServer\Processing\OutputProcess.cs" />
+    <Compile Include="FusionServer\Processing\OutputProcessor.cs" />
     <Compile Include="FusionServer\Processing\ParallelPipeline.cs" />
     <Compile Include="FusionServer\Common\DataProducer.cs" />
     <Compile Include="FusionServer\Processing\SerialPipeline.cs" />

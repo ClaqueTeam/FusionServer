@@ -2,7 +2,7 @@
 
 namespace FusionServer.FusionServer.Processing
 {
-    class FusionProcess : FusionServer.Common.DataProducer<FusionServer.Data.FrameData>, FusionServer.Common.IDataConsumer<FusionServer.Data.FrameData>
+    class FusionProcessor : FusionServer.Common.DataProducer<FusionServer.Data.FrameData>, FusionServer.Common.IDataConsumer<FusionServer.Data.FrameData>
     {
         protected override void ThreadLoopProcessing()
         {

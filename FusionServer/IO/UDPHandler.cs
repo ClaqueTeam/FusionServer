@@ -8,7 +8,9 @@ namespace FusionServer.FusionServer.IO
         private System.Net.IPEndPoint LocalIPEndPoint;
         private System.Net.Sockets.UdpClient UDPConnexion;
 
-        public UDPHandler(string ComponentName, int port)
+        private FusionServer.THEIAProcessing ProcessingPipeline;
+
+        public UDPHandler(string ComponentName, int port, FusionServer.THEIAProcessing ProcessingPipeline)
         {
             this.ComponentName = ComponentName;
             this.LocalIPEndPoint = new System.Net.IPEndPoint(System.Net.IPAddress.Any, port);
@@ -36,7 +38,7 @@ namespace FusionServer.FusionServer.IO
                 Program.BuildProcessingPipeline(RemoteIP);
             }
 
-            FusionServer.Processing.InputProcess handler;
+            FusionServer.Processing.InputProcessor handler;
             Program.InputProcessors.TryGetValue(RemoteIP, out handler);
             handler.Push(this.ComponentName, data);
         }
